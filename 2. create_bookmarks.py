@@ -1,3 +1,14 @@
+import subprocess
+import sys
+
+# Ensure required modules are installed
+required_modules = ['tkinter']
+for module in required_modules:
+    try:
+        __import__(module)
+    except ImportError:
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', module])
+
 import tkinter as tk
 from tkinter import filedialog
 
